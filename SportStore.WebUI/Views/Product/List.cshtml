@@ -1,0 +1,51 @@
+﻿@model PagedList.IPagedList<SportStore.Domain.Entities.Product>
+    @using PagedList.Mvc
+<link href="~/Content/PagedList.css" type="text/css" rel="stylesheet"/>
+
+@using SportStore.Domain.Entities
+
+@{
+    ViewBag.Title = "List";
+    AjaxOptions ajaxOpts = new AjaxOptions
+    {
+        UpdateTargetId = "dvContent"
+    };
+
+}
+
+<h2>List</h2>
+
+<div class="row panel">
+    <div class="col-md-3">
+        @Html.Action("Menu", "Nav")
+    </div>
+
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Product List
+            </div>
+            <div class="panel-body">
+                @using (Ajax.BeginForm("List", ajaxOpts))
+                {
+                    <p>
+                        Find by: @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "input" })
+                        <input type="submit" value="Search" />
+                    </p>
+                }
+               
+                <div id="dvContent">
+                    @foreach (Product product in Model){
+                        @Html.Partial("_ProductSummary", product)
+                    }
+
+                </div>
+            </div>
+            <br />
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("List", new { page, category = ViewBag.Category, searchString = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</div>
+
+
