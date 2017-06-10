@@ -8,5 +8,8 @@ namespace SportStore.Domain.Entities
 {
     public class SubCategory
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+
     }
 }
