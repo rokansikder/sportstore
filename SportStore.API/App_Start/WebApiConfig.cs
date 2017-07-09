@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SportStore.API
 {
@@ -22,8 +23,14 @@ namespace SportStore.API
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            config.EnableCors();
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace SportStore.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class CategoryController : ApiController
     {
         ICategoryRepository repo;
