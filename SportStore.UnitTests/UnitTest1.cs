@@ -6,6 +6,7 @@ using SportStore.DB.Repository;
 using SportStore.WebUI.Controllers;
 using System.Collections.Generic;
 using System.Linq;
+using SportStore.DB.Abstract;
 
 namespace SportStore.UnitTests
 {

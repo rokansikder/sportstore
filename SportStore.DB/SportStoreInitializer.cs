@@ -11,6 +11,8 @@ namespace SportStore.DB
 {
     public class SportStoreInitializer:DropCreateDatabaseIfModelChanges<SportStoreContext>
     {
+
+       
         protected override void Seed(SportStoreContext context)
         {
             var products = new List<Product>

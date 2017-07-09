@@ -1,0 +1,35 @@
+﻿<link href="~/Content/product.css"  rel="stylesheet"/>
+
+<div ng-controller="listController">
+    
+    <div class="mainContainer">
+        <div class="leftContainer">
+            <h4>Category</h4>    
+                <ul>
+                    <li ng-repeat="cat in categories">
+                        <a href="/product/bycategory/{{cat.categoryID}}">{{cat.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        <div class="rightContainer">
+
+            <div>
+                <div class="col-xs-4" ng-repeat="product in products">
+                    <div class="well">
+                        <h3 class="productTitle">
+                            <a href="product/{{product.productID}}"><label ng-bind="product.name">  </label></a>
+                        </h3>
+                        <h4>
+                            {{product.description}}
+                        </h4>
+                        <h5>Price: {{product.price | currency}} </h5>
+                    </div>
+                </div>
+            </div>
+
+        
+        </div>
+    </div>
+
+    
+</div>

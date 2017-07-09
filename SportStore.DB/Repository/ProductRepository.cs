@@ -4,18 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SportStore.Domain.Entities;
+using SportStore.DB.Abstract;
 
 namespace SportStore.DB.Repository
 {
     public class ProductRepository:IProductRepository
     {
-        SportStoreContext db = new SportStoreContext();
+        SportStoreContext db = new SportStoreContext(); 
         public IEnumerable<Product> Products {
             get { return db.Products; }
+            
         }
 
+        public Product GetById(int id) {
+            return db.Products.Where(c => c.ProductID == id).SingleOrDefault();
+        }
+   
         public int AddProduct(Product product)
         {
+           
             db.Products.Add(product);
             return db.SaveChanges();
         }

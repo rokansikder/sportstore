@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using SportStore.DB.Repository;
 using SportStore.Domain.Entities;
+using SportStore.DB.Abstract;
 
 namespace SportStore.WebUI.Controllers
 {

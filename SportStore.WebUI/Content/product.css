@@ -1,0 +1,15 @@
+﻿
+.mainContainer{
+    width:98%;
+    height:100%;
+}
+
+.leftContainer {
+    width:20%;
+    float:left;
+}
+
+.rightContainer {
+    width:78%;
+    float:left;
+}
