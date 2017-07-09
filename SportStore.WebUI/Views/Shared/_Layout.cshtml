@@ -12,6 +12,11 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery-ui.unobtrusive.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular/angular.js"></script>
+    <script src="~/Scripts/angular/angular-route.js"></script>
+    <script src="~/Scripts/StoreApp.js"></script>
+    <script src="~/Scripts/StoreRoute.js"></script>
+
     <style>
 
         .navbar-right {
@@ -22,58 +27,8 @@
 
     </style>
 
-    <script>
-
-        var i = 0;
-
-        $(document).ready(function () {
-            
-            3 + 4;
-            var textBlock = "I can create a really really long sentence but never mind.";
-            var queryWord = "really";
-
-            var blockArr = textBlock.split(' ');
-
-            for(var i=0; i< blockArr.length; i++)
-            {
-                if (blockArr[i] == queryWord) {
-                   
-                }
-            }
-
-            var a = [1,2,3];
-            var c = a.every(function(item){
-                return item >1;
-            });
-            alert(c);
-
-            var b = a.filter(function (item) {
-                return (item > 1);
-            });
-
-            console.log(b);
-            //function Sample (aNumber)
-            //{
-            //    this.aNumber = aNumber;
-            //}
-            //var objectFromSample = new Sample(15);
-            ////Here, we add a new property using the ‘prototype’ keyword
-            //Sample.prototype.aString = "Hi there!";
-            //console.log(objectFromSample.aString);
-            //var anotherObjectFromSample = new Sample(25);
-            //console.log(anotherObjectFromSample.aString);
-
-            //function ChangeUrl() {
-            //    window.location.hash = i;
-            //    i++;
-            //}
-
-            //setInterval(ChangeUrl, 1000);
-        });
-        
-    </script>
 </head>
-<body>
+<body ng-app="mainApp">
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -90,7 +45,8 @@
    
     <div class="row panel">
         <div class="col-xs-12 col-sm-12 ">
-            @RenderBody()
+            @*@RenderBody()*@
+            <ng-view></ng-view>
         </div>
     </div>
 

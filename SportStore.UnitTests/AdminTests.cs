@@ -8,6 +8,7 @@ using SportStore.Domain.Entities;
 using Moq;
 using System.Linq;
 using System.Web.Mvc;
+using SportStore.DB.Abstract;
 
 namespace SportStore.UnitTests
 {

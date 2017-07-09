@@ -13,11 +13,13 @@ namespace SportStore.WebUI.Controllers
         private IAuthProvider authProvider;
 
 
+        
         public AccountController(IAuthProvider provider)
         {
             authProvider = provider;
         }
 
+        
         // GET: Account
         public ActionResult Login()
         {

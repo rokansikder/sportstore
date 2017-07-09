@@ -12,9 +12,10 @@ namespace SportStore.DB
     {
         public SportStoreContext() : base("name=Constr")
         {
-
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
+       
         public DbSet<Product> Products { get; set; }
         public DbSet<ShippingDetails> ShippingDetails { get; set; }
         public DbSet<CartLine> CartLines { get; set; }

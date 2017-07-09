@@ -1,0 +1,4 @@
+C:\Practice\SportStore\SportStore.Command\bin\Debug\SportStore.Command.dll
+C:\Practice\SportStore\SportStore.Command\bin\Debug\SportStore.Command.pdb
+C:\Practice\SportStore\SportStore.Command\obj\Debug\SportStore.Command.dll
+C:\Practice\SportStore\SportStore.Command\obj\Debug\SportStore.Command.pdb
