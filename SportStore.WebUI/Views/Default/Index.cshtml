@@ -15,8 +15,10 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/angular/angular.js"></script>
-    <script src="~/Scripts/angular/angular-route.js"></script>
+    <script src="~/Scripts/angular/angular-ui-router.min.js"></script>
     <script src="~/Scripts/angular/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular/angular-resource.js"></script>
+    <script src="~/Scripts/angular/angular-ui-router.js"></script>
 
     <style>
         .navbar-right {
@@ -39,15 +41,15 @@
                 <a href="/" class="navbar-brand">Online Sport Store</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"> <a href="/">Home</a></li>
-                <li><a href="/product">Product list</a></li>
+                <li class="active"> <a ui-sref="home.mainPage">Home</a></li>
+                <li><a ui-sref="product">Product list</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="panel">
         <div class="col-xs-12 col-sm-12 panel-body ">
-            <div ng-view></div>
+            <div ui-view></div>
         </div>
     </div>
 
@@ -58,14 +60,15 @@
    
     
     <script src="~/Scripts/StoreApp.js"></script>
-    <script src="~/Scripts/StoreRoute.js"></script>
-    <script src="~/Scripts/angular/angular-resource.js"></script>
-    
+   
     <script src="~/Scripts/services/ProductServices.js"></script>
     <script src="~/Scripts/services/categoryServices.js"></script>
     <script src="~/Scripts/controllers/categoryControllers.js"></script>
     <script src="~/Scripts/controllers/productControllers.js"></script>
     <script src="~/Scripts/HomeControllers.js"></script>
+    <script src="~/Scripts/StoreRoute.js"></script>
+    <script src="~/Scripts/routes/productModules.js"></script>
+
 
 </body>
 </html>

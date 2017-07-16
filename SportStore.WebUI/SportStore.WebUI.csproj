@@ -225,6 +225,7 @@
     <Content Include="Scripts\angular\angular-scenario.js" />
     <Content Include="Scripts\angular\angular-touch.js" />
     <Content Include="Scripts\angular\angular-touch.min.js" />
+    <Content Include="Scripts\angular\angular-ui-router.min.js" />
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -981,6 +982,7 @@
     <Content Include="Scripts\jquery-ui.onobtrusive.min.js" />
     <Content Include="Scripts\jquery-ui.unobtrusive.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\routes\productModules.js" />
     <Content Include="Scripts\services\categoryServices.js" />
     <Content Include="Scripts\services\ProductServices.js" />
     <Content Include="Scripts\StoreApp.js" />

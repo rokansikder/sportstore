@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using SportStore.Domain.Entities;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace SportStore.DB
 {
@@ -21,5 +22,10 @@ namespace SportStore.DB
         public DbSet<CartLine> CartLines { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {   
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

@@ -43,14 +43,22 @@ namespace SportStore.WebUI.Controllers
             }
         }
 
+        [Route("/category")]
+        [Route("home")]
         public ActionResult Home() {
             return View();
         }
 
+      
         public ActionResult Details() {
             return View();
         }
-        public ActionResult List(string searchString, string category, int? page)
+
+        public ActionResult List() {
+            return View();
+        }
+
+        public ActionResult List1(string searchString, string category, int? page)
         {
             LinqExample();
         //    IEnumerable<int> empty = Enumerable.Empty<int>();

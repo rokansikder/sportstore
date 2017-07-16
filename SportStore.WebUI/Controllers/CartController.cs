@@ -14,12 +14,15 @@ namespace SportStore.WebUI.Controllers
         private IProductRepository repo;
         private IOrderProcessor orderProcessor;
 
+        
         public CartController(IProductRepository _repo, IOrderProcessor proc)
         {
             repo = _repo;
             orderProcessor = proc;
         }
 
+        [Authorize(Roles ="Admin")]
+        
         public ViewResult Index(string returnUrl)
         {
             return View(new CartIndexViewModel

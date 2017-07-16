@@ -27,6 +27,7 @@ namespace SportStore.WebUI.Infrastructure
 
         public object GetService(Type serviceType)
         {
+           
             return kernel.TryGet(serviceType);
         }
 
@@ -55,6 +56,7 @@ namespace SportStore.WebUI.Infrastructure
 
             kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
             kernel.Bind<ICategoryRepository>().To<CategoryRepository>();
+            
         }
 
     }

@@ -6,8 +6,8 @@
 
             },
             productsbyCat: function (id) {
-              
-                return $http({ method: 'GET', url: API_ENDPOINT + '/Product/bycategory/' + id })
+               
+                return $http({ method: 'GET', url: API_ENDPOINT + 'Product/bycategory/' + id })
             }
             
         }

@@ -1,18 +1,25 @@
-﻿angular.module('myApp').config(['$routeProvider', '$locationProvider',
-    function ($routeProvider, $locationProvider) {
-        $routeProvider.when('/', {
+﻿angular.module('myApp').config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
+    function ($stateProvider, $locationProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/");
+
+        $stateProvider.state('home.mainPage', {
+            cache: false,
+            url: '/',
             controller: 'listController',
             templateUrl: '/Product/Home'
-        }).when('/product', {
+        }).state('product', {
+            cache: false,
+            url:'/product',
             controller: 'listController',
             templateUrl: '/Product/Home'
-        }).when('/product/:id', {
+        }).state('productbyid', {
+            cache: false,
+            url:'/product/:id',
             controller: 'DetailsController',
             templateUrl: '/Product/Details'
-        }).when('/product/bycategory/:id', {
-            controller: 'listController',
-            templateUrl: '/Product/Home'
         });
 
+        
+        //$urlRouterProvider.otherWise('home.mainPage');
         $locationProvider.html5Mode(true);
     }]);
