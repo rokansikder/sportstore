@@ -17,6 +17,13 @@
             url:'/product/:id',
             controller: 'DetailsController',
             templateUrl: '/Product/Details'
+        }).state('category', {
+            url: '/category',
+            controller: 'categoryListController',
+            templateUrl: 'Category/Index'
+        }).state('home', {
+            url: '/home',
+            templateUrl:'default/home'
         });
 
         

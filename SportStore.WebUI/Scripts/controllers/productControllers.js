@@ -3,10 +3,11 @@
         getCategories();
       
         function getCategories() {
-            Category.categories().then(function (response) {
-                $scope.categories = response.data;
+            $scope.categories = Category.query();
+            //Category.categories().then(function (response) {
+            //    $scope.categories = response.data;
                 
-            });
+            //});
         }
        
         $state.go('product.dashboard');

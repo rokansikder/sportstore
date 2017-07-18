@@ -1,32 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Threading.Tasks;
-using SportStore.Domain.Entities;
-using SportStore.DB.Abstract;
+using System.Web;
+using System.Web.Mvc;
 
 namespace SportStore.WebUI.Controllers
 {
-    public class CategoryController : ApiController
+    public class CategoryController : Controller
     {
-        ICategoryRepository repo;
-
-        public CategoryController(ICategoryRepository _repo) {
-            repo = _repo;
-        }
-        public Category Get(int id)
+        // GET: Category
+        public ActionResult Index()
         {
-            return repo.Get(id);
+            return View();
         }
 
-        public IList<Category> GetAll()
-        {
-            return repo.GetAll();
-        }
-
-
+        
     }
 }

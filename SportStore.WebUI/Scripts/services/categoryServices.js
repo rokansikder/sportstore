@@ -1,8 +1,5 @@
-﻿angular.module('myApp').factory('Category', ['$http', '$state', 'API_ENDPOINT',
-    function ($http, $state, API_ENDPOINT) {
-        return {
-            categories: function(){
-                return $http({method:'GET', url:API_ENDPOINT+'category/'});
-            }
-        }
-    }])
+﻿angular.module('myApp').factory('Category', ['$http', '$resource', 'API_ENDPOINT',
+    function ($http, $resource, API_ENDPOINT) {
+        return $resource(API_ENDPOINT + 'category/', { id: '@id' })
+
+    }]);
