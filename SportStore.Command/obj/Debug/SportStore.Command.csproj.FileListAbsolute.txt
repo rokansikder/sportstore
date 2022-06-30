@@ -2,8 +2,11 @@ C:\Practice\SportStore\SportStore.Command\bin\Debug\SportStore.Command.dll
 C:\Practice\SportStore\SportStore.Command\bin\Debug\SportStore.Command.pdb
 C:\Practice\SportStore\SportStore.Command\obj\Debug\SportStore.Command.dll
 C:\Practice\SportStore\SportStore.Command\obj\Debug\SportStore.Command.pdb
+<<<<<<< HEAD
 C:\Work\sportstore\SportStore.Command\bin\Debug\SportStore.Command.dll
 C:\Work\sportstore\SportStore.Command\bin\Debug\SportStore.Command.pdb
 C:\Work\sportstore\SportStore.Command\obj\Debug\SportStore.Command.csproj.CoreCompileInputs.cache
 C:\Work\sportstore\SportStore.Command\obj\Debug\SportStore.Command.dll
 C:\Work\sportstore\SportStore.Command\obj\Debug\SportStore.Command.pdb
+=======
+>>>>>>> 6a5a48c7405898f2d2e0a07fe5ab1b0cb1ae9be6

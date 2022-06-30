@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6e044b1b-3681-434b-9a0d-b62419594ab2": {
+      "ProjectGuid": "6e044b1b-3681-434b-9a0d-b62419594ab2",
+      "DisplayName": "SportStore.WebUI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
