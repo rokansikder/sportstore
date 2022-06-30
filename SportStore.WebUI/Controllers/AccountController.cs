@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using SportStore.WebUI.Abstract;
 using SportStore.WebUI.Models;
-using SportStore.WebUI.Abstract;
+using System.Web.Mvc;
 
 namespace SportStore.WebUI.Controllers
 {
+    //Add a comment
     public class AccountController : Controller
     {
         private IAuthProvider authProvider;
 
-
-        
         public AccountController(IAuthProvider provider)
         {
             authProvider = provider;
         }
 
-        
         // GET: Account
         public ActionResult Login()
         {
@@ -27,8 +21,8 @@ namespace SportStore.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(LoginViewModel model, string returnURL) {
-
+        public ActionResult Login(LoginViewModel model, string returnURL)
+        {
             if (ModelState.IsValid)
             {
                 if (authProvider.Authenticate(model.UserName, model.Password))
@@ -42,7 +36,9 @@ namespace SportStore.WebUI.Controllers
                 }
             }
             else
+            {
                 return View();
+            }
         }
     }
 }
